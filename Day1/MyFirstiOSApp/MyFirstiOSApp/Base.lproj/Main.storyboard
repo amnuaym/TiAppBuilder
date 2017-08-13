@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thailand-is-still-the-popular" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-K3-PzG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rdE-K3-PzG" secondAttribute="height" multiplier="32:19" id="S1r-Lq-jyh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-UZ-Rpk">
+                                <rect key="frame" x="12" y="430" width="296" height="30"/>
+                                <color key="backgroundColor" red="0.16775146599999999" green="0.33770870040000001" blue="0.99919462199999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lks-Sa-bRi"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="left" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cnS-xw-4ZR">
+                                <rect key="frame" x="14" y="219" width="290" height="190"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments &amp; Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mI-rx-HqI">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-Ge-qbI">
+                                        <rect key="frame" x="0.0" y="28" width="290" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16b-jA-o6M">
+                                        <rect key="frame" x="0.0" y="66" width="290" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HE5-Qg-qtC">
+                                        <rect key="frame" x="0.0" y="94" width="290" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contat Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMm-2c-L7w">
+                                        <rect key="frame" x="0.0" y="132" width="290" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-eO-fmK">
+                                        <rect key="frame" x="0.0" y="160" width="290" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kwW-UZ-Rpk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="Bhi-XB-uX7"/>
+                            <constraint firstItem="8mI-rx-HqI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-30" id="JZc-yE-Ca6"/>
+                            <constraint firstItem="rdE-K3-PzG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NDj-Qy-YRj"/>
+                            <constraint firstItem="rdE-K3-PzG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qyx-8I-oBe"/>
+                            <constraint firstItem="kwW-UZ-Rpk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="ZHk-8y-Zp7"/>
+                            <constraint firstItem="kwW-UZ-Rpk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="bHK-km-WlO"/>
+                            <constraint firstItem="rdE-K3-PzG" firstAttribute="trailing" secondItem="8mI-rx-HqI" secondAttribute="trailing" constant="16" id="pXT-Vb-fA9"/>
+                            <constraint firstItem="rdE-K3-PzG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vKQ-H5-s7e"/>
+                            <constraint firstItem="cnS-xw-4ZR" firstAttribute="top" secondItem="rdE-K3-PzG" secondAttribute="bottom" constant="29" id="xXp-k2-k4M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="36.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Thailand-is-still-the-popular" width="800" height="533"/>
+    </resources>
+</document>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter-Bold</string>
+        </array>
+        <array key="Copperplate.ttc">
+            <string>Copperplate-Bold</string>
+        </array>
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyNYResolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grass.png" translatesAutoresizingMaskIntoConstraints="NO" id="AkX-3Z-QHw">
+                                <rect key="frame" x="117.5" y="0.0" width="450.5" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AkX-3Z-QHw" secondAttribute="height" multiplier="45:32" id="O3o-rn-zD4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get in Shape" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-ma-9Fp">
+                                <rect key="frame" x="11" y="146.5" width="173" height="28.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28.5" id="5Jl-7j-yHU"/>
+                                    <constraint firstAttribute="width" secondItem="Qkp-ma-9Fp" secondAttribute="height" multiplier="85:14" id="bUV-Ul-Why"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be a Successful Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zt3-CY-ieQ">
+                                <rect key="frame" x="11.5" y="20" width="545" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zt3-CY-ieQ" secondAttribute="height" multiplier="425:23" id="UZn-Pz-Yo8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="29"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy Life" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXh-qZ-2AH">
+                                <rect key="frame" x="111" y="200" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="LgL-nK-1dw"/>
+                                    <constraint firstAttribute="width" secondItem="MXh-qZ-2AH" secondAttribute="height" multiplier="123:29" id="scw-m8-14E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="23"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="jin-Ci-VT7">
+                                <rect key="frame" x="237" y="0.0" width="94" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jin-Ci-VT7" secondAttribute="height" multiplier="47:160" id="Y7q-7V-lSJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Other People" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSI-ZA-xEc">
+                                <rect key="frame" x="35" y="83" width="185" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lSI-ZA-xEc" secondAttribute="height" multiplier="176:27" constant="9" id="JQr-ra-mci"/>
+                                    <constraint firstAttribute="height" constant="27" id="c7X-mi-HBg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="centerY" secondItem="AkX-3Z-QHw" secondAttribute="centerY" id="0lq-bn-74V"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1cT-Fh-Rpj"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="baseline" secondItem="AkX-3Z-QHw" secondAttribute="baseline" id="1d5-wU-ChD"/>
+                            <constraint firstItem="AkX-3Z-QHw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Igo-P6-Dgw"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="centerY" secondItem="Qkp-ma-9Fp" secondAttribute="bottom" constant="-15" id="MKh-b3-3gw"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="leading" secondItem="lSI-ZA-xEc" secondAttribute="trailing" constant="17" id="Np8-bq-V6v"/>
+                            <constraint firstItem="Qkp-ma-9Fp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="Pa4-5l-uvw"/>
+                            <constraint firstItem="AkX-3Z-QHw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QX7-25-sJS"/>
+                            <constraint firstItem="MXh-qZ-2AH" firstAttribute="top" secondItem="jin-Ci-VT7" secondAttribute="centerY" constant="40" id="URc-Wu-ZOZ"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="centerY" secondItem="lSI-ZA-xEc" secondAttribute="bottom" constant="50" id="UZc-3B-jaQ"/>
+                            <constraint firstItem="AkX-3Z-QHw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vhg-jC-8yz"/>
+                            <constraint firstItem="lSI-ZA-xEc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Zvd-ZZ-bI8"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c6N-5t-vnK"/>
+                            <constraint firstItem="zt3-CY-ieQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eD5-04-lFq"/>
+                            <constraint firstItem="MXh-qZ-2AH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="eYC-0F-aSM"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="leading" secondItem="Qkp-ma-9Fp" secondAttribute="trailing" constant="53" id="lb3-rb-sMd"/>
+                            <constraint firstItem="zt3-CY-ieQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lbN-Q4-eUJ"/>
+                            <constraint firstItem="jin-Ci-VT7" firstAttribute="leading" secondItem="MXh-qZ-2AH" secondAttribute="trailing" constant="3" id="wIs-lc-6P6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="69.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cartoon.png" width="150" height="337"/>
+        <image name="grass.png" width="500" height="347"/>
+    </resources>
+</document>
