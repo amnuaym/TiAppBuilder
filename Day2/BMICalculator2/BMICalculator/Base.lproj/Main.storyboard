@@ -138,7 +138,7 @@ amnuay@gmail.com
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.99919462199999998" green="0.73988302409999995" blue="0.77969072179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FnM-Zn-a3Q" firstAttribute="leading" secondItem="HpB-7J-h7R" secondAttribute="leading" constant="16" id="1KE-BS-mHw"/>
                             <constraint firstItem="URv-zg-0IY" firstAttribute="centerX" secondItem="HpB-7J-h7R" secondAttribute="centerX" id="A8n-sj-u8y"/>
