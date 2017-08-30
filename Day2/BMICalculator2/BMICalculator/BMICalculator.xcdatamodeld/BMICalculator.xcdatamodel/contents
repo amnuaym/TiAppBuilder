@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13233.4" systemVersion="16G29" minimumToolsVersion="Xcode 8.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BMI_History" representedClassName="BMI_HistoryMO" syncable="YES" codeGenerationType="class">
+        <attribute name="bmiResult" optional="YES" attributeType="Double" minValueString="0" maxValueString="100" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="height_m" optional="YES" attributeType="Double" minValueString="0" maxValueString="3" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recordDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weight_kg" optional="YES" attributeType="Double" minValueString="0" maxValueString="200" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BMI_History" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
 </model>
