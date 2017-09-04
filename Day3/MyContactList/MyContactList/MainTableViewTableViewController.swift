@@ -120,6 +120,8 @@ class MainTableViewTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let tempContactListItem = myContactInfoList[sourceIndexPath.row]
+        myContactInfoList.remove(at: sourceIndexPath.row)
+        myContactInfoList.insert(tempContactListItem, at: destinationIndexPath.row)
         
     }
     
