@@ -14,6 +14,14 @@ class MainTableViewTableViewController: UITableViewController {
     override var prefersStatusBarHidden: Bool {return true}
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        func setEditing(_ editing: Bool, animated: Bool ){
+        super.setEditing(editing, animated: animated)
+        }
+        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -106,6 +114,20 @@ class MainTableViewTableViewController: UITableViewController {
     }
     */
 
+    // MARK: allow re-shuffle Row
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let tempContactListItem = myContactInfoList[sourceIndexPath.row]
+        
+    }
+    
+    
+    
+    
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

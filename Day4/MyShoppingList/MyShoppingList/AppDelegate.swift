@@ -1,14 +1,13 @@
 //
 //  AppDelegate.swift
-//  MyContactList
+//  MyShoppingList
 //
-//  Created by Amnuay M on 8/28/17.
+//  Created by Amnuay M on 9/4/17.
 //  Copyright © 2017 Amnuay M. All rights reserved.
 //
 
 import UIKit
 import CoreData
-import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,27 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    //    @UIApplicationMain
-    //    class AppDelegate: UIResponder, UIApplicationDelegate {
-    //
-    //        var window: UIWindow?
-            let MyAdmobAppID = "ca-app-pub-7050236446859797~6766047856"
-    
-    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-                // Initialize the Google Mobile Ads SDK.
-                // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
-                GADMobileAds.configure(withApplicationID: "\(MyAdmobAppID)")
-                return true
-            }
-    //    }
-    
-    
-    
-    
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        // Override point for customization after application launch.
-//        return true
-//    }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -71,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "MyContactList")
+        let container = NSPersistentContainer(name: "MyShoppingList")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

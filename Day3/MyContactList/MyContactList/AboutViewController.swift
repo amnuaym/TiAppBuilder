@@ -12,22 +12,21 @@ import GoogleMobileAds
 
 class AboutViewController: UIViewController {
     
-    @UIApplicationMain
-    class AppDelegate: UIResponder, UIApplicationDelegate {
-        
-        var window: UIWindow?
-        let MyAdmobAppID = "ca-app-pub-7050236446859797~6766047856"
+//    @UIApplicationMain
+//    class AppDelegate: UIResponder, UIApplicationDelegate {
+//
+//        var window: UIWindow?
+//        let MyAdmobAppID = "ca-app-pub-7050236446859797~6766047856"
+//
+//        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//            // Initialize the Google Mobile Ads SDK.
+//            // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
+//            GADMobileAds.configure(withApplicationID: "\(MyAdmobAppID)")
+//            return true
+//        }
+//    }
 
-        func application(_ application: UIApplication,
-                         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-            // Initialize the Google Mobile Ads SDK.
-            // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
-            GADMobileAds.configure(withApplicationID: "\(MyAdmobAppID)")
-            
-            return true
-        }
-        
-    }
+    
     var bannerView: GADBannerView!
     let MyAdmobUnitID = "ca-app-pub-7050236446859797/4150604755"
     

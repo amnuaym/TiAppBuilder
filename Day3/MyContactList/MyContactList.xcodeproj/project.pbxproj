@@ -19,6 +19,16 @@
 		8F0D6BA91F53C81500E6B10D /* MyContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D6BA81F53C81500E6B10D /* MyContactListTests.swift */; };
 		8F0D6BB41F53C81500E6B10D /* MyContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D6BB31F53C81500E6B10D /* MyContactListUITests.swift */; };
 		8F5ECD9A1F5569ED00C5B9E3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5ECD991F5569ED00C5B9E3 /* AboutViewController.swift */; };
+		8F75944F1F570FCE0005E617 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F75944E1F570FCD0005E617 /* AVFoundation.framework */; };
+		8F7594511F570FD90005E617 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594501F570FD90005E617 /* AudioToolbox.framework */; };
+		8F7594531F570FE10005E617 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594521F570FE10005E617 /* CoreGraphics.framework */; };
+		8F7594551F570FE80005E617 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594541F570FE80005E617 /* CoreMedia.framework */; };
+		8F7594571F570FEF0005E617 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594561F570FEF0005E617 /* CoreMotion.framework */; };
+		8F7594591F570FF90005E617 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594581F570FF90005E617 /* CoreTelephony.framework */; };
+		8F75945B1F5710010005E617 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F75945A1F5710000005E617 /* CoreVideo.framework */; };
+		8F75945D1F5710080005E617 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F75945C1F5710070005E617 /* GLKit.framework */; };
+		8F75945F1F5710220005E617 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F75945E1F5710220005E617 /* MediaPlayer.framework */; };
+		8F7594611F5710310005E617 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7594601F5710300005E617 /* MessageUI.framework */; };
 		D64E94FD06FF9BC2D204C92F /* Pods_MyContactListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A472A25553F6E055752575E3 /* Pods_MyContactListUITests.framework */; };
 		EE7CC2D731623255E08960A4 /* Pods_MyContactList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360E1581F11D8517EBD2DA57 /* Pods_MyContactList.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +76,16 @@
 		8F0D6BB31F53C81500E6B10D /* MyContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactListUITests.swift; sourceTree = "<group>"; };
 		8F0D6BB51F53C81500E6B10D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F5ECD991F5569ED00C5B9E3 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		8F75944E1F570FCD0005E617 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8F7594501F570FD90005E617 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8F7594521F570FE10005E617 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8F7594541F570FE80005E617 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8F7594561F570FEF0005E617 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8F7594581F570FF90005E617 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8F75945A1F5710000005E617 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		8F75945C1F5710070005E617 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8F75945E1F5710220005E617 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8F7594601F5710300005E617 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A472A25553F6E055752575E3 /* Pods_MyContactListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyContactListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +94,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7594611F5710310005E617 /* MessageUI.framework in Frameworks */,
+				8F75945F1F5710220005E617 /* MediaPlayer.framework in Frameworks */,
+				8F75945D1F5710080005E617 /* GLKit.framework in Frameworks */,
+				8F75945B1F5710010005E617 /* CoreVideo.framework in Frameworks */,
+				8F7594591F570FF90005E617 /* CoreTelephony.framework in Frameworks */,
+				8F7594571F570FEF0005E617 /* CoreMotion.framework in Frameworks */,
+				8F7594551F570FE80005E617 /* CoreMedia.framework in Frameworks */,
+				8F7594531F570FE10005E617 /* CoreGraphics.framework in Frameworks */,
+				8F7594511F570FD90005E617 /* AudioToolbox.framework in Frameworks */,
+				8F75944F1F570FCE0005E617 /* AVFoundation.framework in Frameworks */,
 				EE7CC2D731623255E08960A4 /* Pods_MyContactList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +130,16 @@
 		12181283A7595200D7773B5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F7594601F5710300005E617 /* MessageUI.framework */,
+				8F75945E1F5710220005E617 /* MediaPlayer.framework */,
+				8F75945C1F5710070005E617 /* GLKit.framework */,
+				8F75945A1F5710000005E617 /* CoreVideo.framework */,
+				8F7594581F570FF90005E617 /* CoreTelephony.framework */,
+				8F7594561F570FEF0005E617 /* CoreMotion.framework */,
+				8F7594541F570FE80005E617 /* CoreMedia.framework */,
+				8F7594521F570FE10005E617 /* CoreGraphics.framework */,
+				8F7594501F570FD90005E617 /* AudioToolbox.framework */,
+				8F75944E1F570FCD0005E617 /* AVFoundation.framework */,
 				360E1581F11D8517EBD2DA57 /* Pods_MyContactList.framework */,
 				7E1CFD5AE27FED2406993491 /* Pods_MyContactListTests.framework */,
 				A472A25553F6E055752575E3 /* Pods_MyContactListUITests.framework */,
@@ -567,6 +607,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -618,6 +659,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -635,6 +677,7 @@
 				INFOPLIST_FILE = MyContactList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.amsoft.MyContactList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -652,6 +695,7 @@
 				INFOPLIST_FILE = MyContactList/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = io.amsoft.MyContactList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
