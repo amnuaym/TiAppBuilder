@@ -251,6 +251,13 @@ Some Contact Information</string>
                                     <action selector="EmailButton" destination="VAU-cV-T9h" eventType="touchUpInside" id="HXu-6B-Oh9"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-jm-9cy" customClass="GADBannerView">
+                                <rect key="frame" x="16" y="356" width="288" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="adK-Wp-hHf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -259,19 +266,25 @@ Some Contact Information</string>
                             <constraint firstItem="5pX-M4-geE" firstAttribute="top" secondItem="MI4-dQ-EI2" secondAttribute="bottom" constant="8" id="5uK-nm-Ibl"/>
                             <constraint firstItem="ZaC-eB-TSB" firstAttribute="height" secondItem="fw7-0I-vkW" secondAttribute="height" multiplier="0.3" id="D6b-qN-4k7"/>
                             <constraint firstItem="ZaC-eB-TSB" firstAttribute="top" secondItem="96R-8z-BD6" secondAttribute="bottom" constant="22" id="DLQ-E7-6Vw"/>
+                            <constraint firstItem="GuC-jm-9cy" firstAttribute="bottom" secondItem="STg-cc-uJU" secondAttribute="bottom" id="HKc-38-VYQ"/>
                             <constraint firstItem="ZaC-eB-TSB" firstAttribute="centerX" secondItem="STg-cc-uJU" secondAttribute="centerX" id="QdN-y2-cV4"/>
                             <constraint firstItem="MI4-dQ-EI2" firstAttribute="top" secondItem="ZaC-eB-TSB" secondAttribute="bottom" constant="8" id="SL1-TV-UIg"/>
                             <constraint firstItem="ZaC-eB-TSB" firstAttribute="width" secondItem="fw7-0I-vkW" secondAttribute="width" multiplier="0.5" priority="999" id="YAj-hm-5L4"/>
                             <constraint firstItem="96R-8z-BD6" firstAttribute="trailing" secondItem="STg-cc-uJU" secondAttribute="trailing" constant="-16" id="YCc-v9-Di3"/>
+                            <constraint firstItem="GuC-jm-9cy" firstAttribute="leading" secondItem="STg-cc-uJU" secondAttribute="leading" constant="16" id="du1-Z5-xRV"/>
                             <constraint firstItem="MI4-dQ-EI2" firstAttribute="leading" secondItem="STg-cc-uJU" secondAttribute="leading" constant="16" id="elm-dL-NfC"/>
                             <constraint firstItem="96R-8z-BD6" firstAttribute="leading" secondItem="STg-cc-uJU" secondAttribute="leading" constant="16" id="hIl-3W-YEq"/>
                             <constraint firstItem="96R-8z-BD6" firstAttribute="top" secondItem="STg-cc-uJU" secondAttribute="top" constant="5" id="hxu-rc-h1X"/>
+                            <constraint firstItem="STg-cc-uJU" firstAttribute="trailing" secondItem="GuC-jm-9cy" secondAttribute="trailing" constant="16" id="mQW-ri-WF4"/>
                             <constraint firstItem="STg-cc-uJU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5pX-M4-geE" secondAttribute="trailing" id="rfe-X7-lzJ"/>
                             <constraint firstItem="5pX-M4-geE" firstAttribute="centerX" secondItem="MI4-dQ-EI2" secondAttribute="centerX" id="yFI-ZC-xNb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="STg-cc-uJU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About Developer" image="smiley-smile" id="GNn-Gz-lAb"/>
+                    <connections>
+                        <outlet property="GoogleAdMobBanner" destination="GuC-jm-9cy" id="Kxc-sI-5TN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTL-Dy-mLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
