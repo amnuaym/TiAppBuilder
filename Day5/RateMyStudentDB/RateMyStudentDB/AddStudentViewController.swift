@@ -28,29 +28,31 @@ class AddStudentViewController: UIViewController, UINavigationControllerDelegate
         let trimStudentScore = txtScore.text?.trimmingCharacters(in: .whitespaces)
         
         if ((trimStudentScore?.characters.isEmpty)! || (trimStudentName?.characters.isEmpty)! || (self.imgView.image == nil)){
+
             let alertController = UIAlertController(title: "RateMyStudentDB", message: "ข้อมูลไม่ครบถ้วน", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
             alertController.addAction(okButton)
+            
             self.present(alertController, animated: true, completion: nil)
         }else{
             newStudent.setValue(Int(txtScore.text!)!, forKey: "studentRatingScore")
             newStudent.setValue(txtStudent.text!, forKey: "studentName")
             let theImageData = UIImagePNGRepresentation(imgView.image!)! as NSData
             newStudent.setValue(theImageData, forKey: "studentImage")
+            
+            //บันทึกลงฐานข้อมูล
+            do{
+                try myContext.save()
+                print("บันทึกข้อมูลแล้ว!")
+            }catch{
+                print("ไม่สามารถบันทึกข้อมูลได้")
+            }
         }
-
         
 //        newStudent.setValue(txtStudent.text!, forKey: "studentName")
 //        newStudent.setValue(Int(txtScore.text!)!, forKey: "studentRatingScore")
 
-        
-        //บันทึกลงฐานข้อมูล
-        do{
-            try myContext.save()
-            print("บันทึกข้อมูลแล้ว!")
-        }catch{
-            print("ไม่สามารถบันทึกข้อมูลได้")
-        }
         self.dismiss(animated: true, completion: nil)
         
     }
