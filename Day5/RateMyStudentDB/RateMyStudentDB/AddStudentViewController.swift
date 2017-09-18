@@ -18,6 +18,21 @@ class AddStudentViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var txtStudent: UITextField!
     @IBOutlet weak var txtScore: UITextField!
+    
+    @IBAction func ImageTouch() {
+        let methodSelectController = UIAlertController(title: "RateMyStudentDB", message: "Select Image source", preferredStyle: .actionSheet)
+        let CameraSourceButton = UIAlertAction(title: "Camera", style: .default, handler: {
+            (action) in self.cameraButtonMethod()})
+        let CameraRollButton = UIAlertAction(title: "CameraRoll", style: .default, handler: {(action) in self.selectImgMethod()})
+        let CancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        methodSelectController.addAction(CameraSourceButton)
+        methodSelectController.addAction(CameraRollButton)
+        methodSelectController.addAction(CancelButton)
+        
+        self.present(methodSelectController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func saveMethod(){
         //สร้าง Object ของ AppDelegate เพื่อเรียกใช้ persistentContainer
         let myAppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -26,15 +41,20 @@ class AddStudentViewController: UIViewController, UINavigationControllerDelegate
         
         let trimStudentName = txtStudent.text?.trimmingCharacters(in: .whitespaces)
         let trimStudentScore = txtScore.text?.trimmingCharacters(in: .whitespaces)
-        
+
+        // .isEmpty require unwrap ! below is forced unwrap not invert boolean
         if ((trimStudentScore?.characters.isEmpty)! || (trimStudentName?.characters.isEmpty)! || (self.imgView.image == nil)){
 
             let alertController = UIAlertController(title: "RateMyStudentDB", message: "ข้อมูลไม่ครบถ้วน", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            let okButton = UIAlertAction(title: "OK", style: .cancel, handler: {(action) in myContext.delete()})
+//            let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in myContext.delete()})
             
             alertController.addAction(okButton)
+//            alertController.addAction(cancelButton)
             
             self.present(alertController, animated: true, completion: nil)
+            
         }else{
             newStudent.setValue(Int(txtScore.text!)!, forKey: "studentRatingScore")
             newStudent.setValue(txtStudent.text!, forKey: "studentName")

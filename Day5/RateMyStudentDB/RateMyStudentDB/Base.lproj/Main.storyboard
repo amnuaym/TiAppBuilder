@@ -121,6 +121,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voe-Yi-5EZ">
+                                <rect key="frame" x="82.5" y="40" width="155" height="192"/>
+                                <connections>
+                                    <action selector="ImageTouch" destination="pOy-9E-35f" eventType="touchUpInside" id="oi4-Vp-t20"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-9t-Keq">
                                 <rect key="frame" x="82.5" y="40" width="155" height="192"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -201,16 +207,21 @@
                             <constraint firstItem="ADp-Ad-kj2" firstAttribute="bottom" secondItem="cJA-9t-Keq" secondAttribute="bottom" id="NgM-fg-Ssk"/>
                             <constraint firstItem="Yx9-Gd-3qK" firstAttribute="leading" secondItem="ADp-Ad-kj2" secondAttribute="leading" id="QaS-tP-IhL"/>
                             <constraint firstItem="pZv-B4-cma" firstAttribute="top" secondItem="AAa-Vp-555" secondAttribute="bottom" constant="10" id="QbX-TR-xCa"/>
+                            <constraint firstItem="voe-Yi-5EZ" firstAttribute="top" secondItem="cJA-9t-Keq" secondAttribute="top" id="SnW-Zk-VpO"/>
                             <constraint firstItem="AAa-Vp-555" firstAttribute="leading" secondItem="azR-84-42y" secondAttribute="leading" constant="16" id="WYP-rX-mCL"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Yx9-Gd-3qK" secondAttribute="trailing" constant="17.5" id="Z97-Xt-9Uz"/>
                             <constraint firstItem="Yx9-Gd-3qK" firstAttribute="width" secondItem="ADp-Ad-kj2" secondAttribute="width" id="acw-hR-Zu9"/>
+                            <constraint firstItem="voe-Yi-5EZ" firstAttribute="leading" secondItem="cJA-9t-Keq" secondAttribute="leading" id="gan-pH-e1U"/>
                             <constraint firstItem="AAa-Vp-555" firstAttribute="top" secondItem="cJA-9t-Keq" secondAttribute="bottom" constant="20" id="hEM-Qk-eYe"/>
                             <constraint firstItem="UCA-Ti-i61" firstAttribute="leading" secondItem="azR-84-42y" secondAttribute="leading" constant="16" id="huX-F2-nnR"/>
                             <constraint firstItem="cJA-9t-Keq" firstAttribute="centerX" secondItem="azR-84-42y" secondAttribute="centerX" id="kYQ-yU-yCy"/>
                             <constraint firstItem="Yx9-Gd-3qK" firstAttribute="bottom" secondItem="ADp-Ad-kj2" secondAttribute="top" constant="-8" id="kmX-U6-5rD"/>
+                            <constraint firstItem="voe-Yi-5EZ" firstAttribute="width" secondItem="cJA-9t-Keq" secondAttribute="width" id="lAR-nw-36b"/>
                             <constraint firstItem="AAa-Vp-555" firstAttribute="trailing" secondItem="azR-84-42y" secondAttribute="trailing" constant="-16" id="lEl-CB-T3R"/>
                             <constraint firstItem="pZv-B4-cma" firstAttribute="trailing" secondItem="azR-84-42y" secondAttribute="trailing" constant="-16" id="nYY-FA-lkX"/>
                             <constraint firstItem="pZv-B4-cma" firstAttribute="leading" secondItem="azR-84-42y" secondAttribute="leading" constant="16" id="o3E-Aw-bhg"/>
                             <constraint firstItem="PxW-go-R17" firstAttribute="leading" secondItem="azR-84-42y" secondAttribute="leading" constant="16" id="r5Q-7n-mbS"/>
+                            <constraint firstItem="voe-Yi-5EZ" firstAttribute="height" secondItem="cJA-9t-Keq" secondAttribute="height" id="x7k-xB-ogm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="azR-84-42y"/>
                     </view>
