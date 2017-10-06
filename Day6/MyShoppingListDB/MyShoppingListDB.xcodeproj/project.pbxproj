@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F474B6D1F6F9593004BCBB0 /* MainItemCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F474B6C1F6F9593004BCBB0 /* MainItemCategoryTableViewController.swift */; };
+		8F474B6F1F6F95B4004BCBB0 /* ItemCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F474B6E1F6F95B4004BCBB0 /* ItemCategoryViewController.swift */; };
 		D7ED89501F6D7E940029BDF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED894F1F6D7E940029BDF0 /* AppDelegate.swift */; };
 		D7ED89521F6D7E940029BDF0 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ED89511F6D7E940029BDF0 /* ShoppingListViewController.swift */; };
 		D7ED89551F6D7E940029BDF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7ED89531F6D7E940029BDF0 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F474B6C1F6F9593004BCBB0 /* MainItemCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemCategoryTableViewController.swift; sourceTree = "<group>"; };
+		8F474B6E1F6F95B4004BCBB0 /* ItemCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryViewController.swift; sourceTree = "<group>"; };
 		D7ED894C1F6D7E940029BDF0 /* MyShoppingListDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyShoppingListDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ED894F1F6D7E940029BDF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7ED89511F6D7E940029BDF0 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				D7ED895B1F6D7E940029BDF0 /* LaunchScreen.storyboard */,
 				D7ED895E1F6D7E940029BDF0 /* Info.plist */,
 				D7ED89561F6D7E940029BDF0 /* MyShoppingListDB.xcdatamodeld */,
+				8F474B6C1F6F9593004BCBB0 /* MainItemCategoryTableViewController.swift */,
+				8F474B6E1F6F95B4004BCBB0 /* ItemCategoryViewController.swift */,
 			);
 			path = MyShoppingListDB;
 			sourceTree = "<group>";
@@ -142,10 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F474B6F1F6F95B4004BCBB0 /* ItemCategoryViewController.swift in Sources */,
 				D7ED89581F6D7E940029BDF0 /* MyShoppingListDB.xcdatamodeld in Sources */,
 				D7ED89651F6D81F50029BDF0 /* AddItemViewController.swift in Sources */,
 				D7ED89521F6D7E940029BDF0 /* ShoppingListViewController.swift in Sources */,
 				D7ED89501F6D7E940029BDF0 /* AppDelegate.swift in Sources */,
+				8F474B6D1F6F9593004BCBB0 /* MainItemCategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +291,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TKVFGE39ST;
+				DEVELOPMENT_TEAM = 63CUM85V74;
 				INFOPLIST_FILE = MyShoppingListDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = th.ac.dpu.ant.MyShoppingListDB;
+				PRODUCT_BUNDLE_IDENTIFIER = io.amsoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,10 +306,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TKVFGE39ST;
+				DEVELOPMENT_TEAM = 63CUM85V74;
 				INFOPLIST_FILE = MyShoppingListDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = th.ac.dpu.ant.MyShoppingListDB;
+				PRODUCT_BUNDLE_IDENTIFIER = io.amsoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

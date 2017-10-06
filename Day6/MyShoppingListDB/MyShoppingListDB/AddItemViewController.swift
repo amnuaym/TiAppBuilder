@@ -9,19 +9,28 @@
 import UIKit
 import CoreData
 
-class AddItemViewController: UIViewController {
+class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var myShoppingItem : NSManagedObject?
+    
+    var myItemCategoriesList : [AnyObject]? = []
+    
     
     @IBOutlet weak var txtShoppingItem: UITextField!
     @IBOutlet weak var txtUnitPrice: UITextField!
     @IBOutlet weak var txtNumberOfItems: UITextField!
     
+    @IBOutlet weak var pickerViewItemCategory: UIPickerView!
     
     @IBAction func saveShoppingItemMethod() {
         //สร้าง Object ของ AppDelegate เพื่อเรียกใช้ persistentContainer
         let myAppDelegate = UIApplication.shared.delegate as! AppDelegate
         let myContext = myAppDelegate.persistentContainer.viewContext
+        
+        //Read Data from ItemCategory to PickerView
+        let mySelectedItemCategory = pickerViewItemCategory.selectedRow(inComponent: 0)
+        let myItemCategory = myItemCategoriesList![mySelectedItemCategory]
+        
         
         //เช็คว่าเป็นการ Update ข้อมูลหรือสร้างใหม่
         if myShoppingItem != nil{
@@ -29,6 +38,9 @@ class AddItemViewController: UIViewController {
             myShoppingItem?.setValue(Float(txtUnitPrice.text!)!, forKey: "itemPrice")
             myShoppingItem?.setValue(Int(txtNumberOfItems.text!)!, forKey: "itemNumber")
             myShoppingItem?.setValue(1, forKey: "itemStatus")
+            
+            //Add ItemCategory Data
+            myShoppingItem?.setValue(myItemCategory, forKey: "itemCategory")
         }
         else{
             //สร้าง Object ข้อมูล ShoppingItem ของ Core Data
@@ -37,6 +49,9 @@ class AddItemViewController: UIViewController {
             newShoppingItem.setValue(Float(txtUnitPrice.text!)!, forKey: "itemPrice")
             newShoppingItem.setValue(Int(txtNumberOfItems.text!)!, forKey: "itemNumber")
             newShoppingItem.setValue(1, forKey: "itemStatus")
+            
+            //Add ItemCategory Data
+            newShoppingItem.setValue(myItemCategory, forKey: "itemCategory")
         }
         
         //บันทึกลงฐานข้อมูล
@@ -55,17 +70,84 @@ class AddItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerViewItemCategory.dataSource = self
+        pickerViewItemCategory.delegate = self
+        
+        // Read Data of Item Category
+        readItemCategoryFromDB()
+        
+        if myItemCategoriesList == nil {
+            
+            let myAlert = UIAlertController(title: "MyShoppingListDB", message: "Please create Item Category first", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            myAlert.addAction(okButton)
+            self.present(myAlert, animated: true, completion: nil)
+
+            
+        }else{
         if myShoppingItem != nil {
             let myItemName = myShoppingItem?.value(forKey: "itemName") as! String
             let myItemNumber = myShoppingItem?.value(forKey: "itemNumber") as! Int
             let myUnitePrice = myShoppingItem?.value(forKey: "itemPrice") as! Float
             
+            //Read ItemCategory from Shopping Item
+            let myItemCategory = myShoppingItem?.value(forKey: "itemCategory") as! NSManagedObject
+            
             txtShoppingItem.text = myItemName
             txtUnitPrice.text = String(myUnitePrice)
             txtNumberOfItems.text = String(myItemNumber)
+            
+            //Find index of ItemCategory to spin PickerView
+            let myItemCategoryRow = myItemCategoriesList?.index{$0 === myItemCategory}
+                pickerViewItemCategory.selectRow(myItemCategoryRow!, inComponent: 0, animated: true)
+            }
         }
     }
 
+    func readItemCategoryFromDB(){
+
+        let myAppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let myContext = myAppDelegate.persistentContainer.viewContext
+
+        let myFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ItemCategory")
+        
+        do{
+            myItemCategoriesList = try myContext.fetch(myFetchRequest)
+        }catch let error as NSError{
+            print(error.description)
+        }
+        
+    }
+    
+    //MARK: Picker Datasource & Delegate
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myItemCategoriesList!.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 60.0
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let myView = UIView(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.width - 30, height: 60))
+        let myImageView = UIImageView(frame: CGRect(x: 25, y: 0, width: 60, height: 60))
+        let myLabel = UILabel(frame: CGRect(x: 95, y: 0, width: pickerView.bounds.width - 90, height: 60))
+        let myItemCategory = myItemCategoriesList![row]
+        let logo = myItemCategory.value(forKey: "categoryImage") as! Data
+        
+        myLabel.text = myItemCategory.value(forKey: "categoryName") as? String
+        myImageView.image = UIImage(data: logo)
+        
+        myView.addSubview(myLabel)
+        myView.addSubview(myImageView)
+        return myView
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

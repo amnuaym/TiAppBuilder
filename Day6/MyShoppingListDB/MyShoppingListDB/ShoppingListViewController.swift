@@ -14,7 +14,54 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
     //ตัวแปรสำหรับเก็บข้อมูล List ของ ShoppingItems
     var myShoppingItemsList : [AnyObject]? = []
     
+    //Add Variables for Item Category store
+    var myItemCategoriesList : [AnyObject]? = []
+    
+    @IBOutlet weak var mySegmentedControl: UISegmentedControl!
     @IBOutlet weak var myTableView: UITableView!
+    
+    //MARK: Customized SegmentedControl Methods
+    func customizedSegmentedControlTab(){
+        //Delete All Segments
+        mySegmentedControl.removeAllSegments()
+        
+        //Add first segment and some more
+        mySegmentedControl.insertSegment(withTitle: "All", at: 0, animated: false)
+        for myIndex in 0..<myItemCategoriesList!.count{
+        let myItemCategory = myItemCategoriesList![myIndex]
+            let myItemName = myItemCategory.value(forKey: "CategoryName") as! String
+            mySegmentedControl.insertSegment(withTitle: myItemName, at: myIndex + 1, animated: false)
+        }
+    }
+    
+    func displayShoppingItemsByItemCategory (categoryNumber : Int){
+        // Create AppDelegate Object to enable PersistentContainer(Core Data) Access
+        let myAppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let myContext = myAppDelegate.persistentContainer.viewContext
+
+        let myFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingItem")
+        
+        if categoryNumber != 0 {
+            let myItemCategory = myItemCategoriesList![categoryNumber - 1] as! NSManagedObject
+            //Specifiy Data Query
+            let myPredicate = NSPredicate(format: "itemCategory = %@", myItemCategory)
+            myFetchRequest.predicate = myPredicate
+        }
+        
+        do{
+            myShoppingItemsList = try myContext.fetch(myFetchRequest)
+        }catch let error as NSError{
+            print(error.description)
+        }
+        self.myTableView.reloadData()
+    }
+    
+    
+    
+    @IBAction func selectSegmentMethod() {
+        let mySelection = mySegmentedControl.selectedSegmentIndex
+        self.displayShoppingItemsByItemCategory(categoryNumber: mySelection)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +77,24 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
         
         let myFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingItem")
         
+        //Add Fetch data by Category
+        let myCategodyFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ItemCategory")
+
+        
         do{
             myShoppingItemsList = try myContext.fetch(myFetchRequest)
+            
+            //Read Iteam Category from Database
+            myItemCategoriesList = try myContext.fetch(myCategodyFetchRequest)
+
         }catch let error as NSError{
             print(error.description)
         }
         self.myTableView.reloadData()
+        self.customizedSegmentedControlTab()
+        mySegmentedControl.selectedSegmentIndex = 0
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +151,19 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
                 self.updateItemInTableView(tableView, indexPath: indexPath)
             }
         done.backgroundColor = UIColor.orange
+        
+//        let button1 = UITableViewRowAction(style: .default, title: "button1") { (action:UITableViewRowAction, indexPath:IndexPath) in
+//        }
+//
+//        let button2 = UITableViewRowAction(style: .default, title: "button2") { (action:UITableViewRowAction, indexPath:IndexPath) in
+//        }
+//        let button3 = UITableViewRowAction(style: .default, title: "button3") { (action:UITableViewRowAction, indexPath:IndexPath) in
+//        }
+//
+//        let button4 = UITableViewRowAction(style: .default, title: "button4") { (action:UITableViewRowAction, indexPath:IndexPath) in
+//        }
+        
+//        return [delete, done, button1, button2, button3, button4]
         return [delete, done]
     }
     
@@ -142,8 +214,10 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource, UITab
         //Refresh ข้อมูลใน TableView
         let myFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingItem")
         
+        
         do{
             myShoppingItemsList = try myContext.fetch(myFetchRequest)
+            
         }catch let error as NSError{
             print(error.description)
         }

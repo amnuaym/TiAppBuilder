@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ItemCategory" representedClassName="ItemCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="shoppingItem" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingItem" inverseName="itemCategory" inverseEntity="ShoppingItem" syncable="YES"/>
+    </entity>
     <entity name="ShoppingItem" representedClassName="ShoppingItem" syncable="YES" codeGenerationType="class">
         <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="itemNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="itemStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itemCategory" maxCount="1" deletionRule="Nullify" destinationEntity="ItemCategory" inverseName="shoppingItem" inverseEntity="ItemCategory" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ShoppingItem" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="ShoppingItem" positionX="-216" positionY="42" width="128" height="118"/>
+        <element name="ItemCategory" positionX="-54" positionY="18" width="128" height="88"/>
     </elements>
 </model>

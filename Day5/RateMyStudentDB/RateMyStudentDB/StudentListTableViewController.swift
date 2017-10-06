@@ -123,7 +123,7 @@ class StudentListTableViewController: UITableViewController, UISearchResultsUpda
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    // MARK: 1 CellEditingSyle
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 
@@ -138,9 +138,6 @@ class StudentListTableViewController: UITableViewController, UISearchResultsUpda
             let myFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "StudentTB")
 //            myFetchRequest.returnsObjectsAsFaults = false
   
-            //Data Conditioning
-            let myPredicate = NSPredicate(format: "studentName ==%@", myStudentList[indexPath.row].StudentName)
-            myFetchRequest.predicate = myPredicate
             
             do{
                 let myFetchResults = try myContext.fetch(myFetchRequest)
@@ -152,13 +149,29 @@ class StudentListTableViewController: UITableViewController, UISearchResultsUpda
             }catch let error as NSError{
                 print(error.description)
             }
-            
+            // Still delete wrong indexed item!!!!!!
+            var deletedStudentName : String = ""
             //Delete data from Data Source Array
-            myStudentList.remove(at: indexPath.row)
+            if mySearchController.isActive && mySearchController.searchBar.text != ""{
+                deletedStudentName = myFilteredStudentList[indexPath.row].StudentName
+                let myIndex = myStudentList.index(of: myFilteredStudentList[indexPath.row])
+                myStudentList.remove(at: myIndex!)
+                myFilteredStudentList.remove(at: indexPath.row)
+                
+            }else {
+                deletedStudentName = myStudentList[indexPath.row].StudentName
+                myStudentList.remove(at: indexPath.row)
+            }
             
             
+
+            //Data Conditioning
+            let myPredicate = NSPredicate(format: "studentName ==%@", deletedStudentName)
+            myFetchRequest.predicate = myPredicate
+
             //Delete from TableView
             // Delete the row from the data source
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             //Save Deleted Database

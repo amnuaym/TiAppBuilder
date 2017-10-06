@@ -42,6 +42,20 @@ class AddStudentViewController: UIViewController, UINavigationControllerDelegate
         let trimStudentName = txtStudent.text?.trimmingCharacters(in: .whitespaces)
         let trimStudentScore = txtScore.text?.trimmingCharacters(in: .whitespaces)
 
+//
+        //HomeWork solution
+//        let checkStudentName = (txtStudent.text?.trimmingCharacters(in: .whitespaces).isEmpty)!
+//
+//        if let v = Int(txtScore.text!) {
+//            if (checkStudentName != true) && (imgView.image != nil) {
+//                //Create Object from AppDelegate to enable persistentContainer
+//                let my AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//                let myContext = myAppDelegate.persistentContainer.viewContext
+//
+//            }
+//        }
+        
+        
         // .isEmpty require unwrap ! below is forced unwrap not invert boolean
         if ((trimStudentScore?.characters.isEmpty)! || (trimStudentName?.characters.isEmpty)! || (self.imgView.image == nil)){
 
