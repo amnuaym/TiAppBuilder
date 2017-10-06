@@ -8,6 +8,9 @@
 
 import UIKit
 
+var myNSObject : NSObject!
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

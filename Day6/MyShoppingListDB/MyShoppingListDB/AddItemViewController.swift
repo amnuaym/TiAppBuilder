@@ -15,6 +15,9 @@ class AddItemViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var myItemCategoriesList : [AnyObject]? = []
     
+//    let SwipLeft = UISwipeGestureRecognizer.
+//    let SwipeLeft = UISwipeGestureRecognizerDirection
+//    let SwipeLeft = UISwipeActionsConfiguration
     
     @IBOutlet weak var txtShoppingItem: UITextField!
     @IBOutlet weak var txtUnitPrice: UITextField!
