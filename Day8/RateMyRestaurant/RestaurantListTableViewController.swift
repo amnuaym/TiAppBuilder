@@ -26,9 +26,17 @@ class RestaurantListTableViewController: UITableViewController {
 
     //MARK: Fetch data from iCloud
     func fetchRestaurantInfoListFromiCloud(){
-        //Create Container variable and specify Database
+
+        //Create Activity Indicator and order it to show
+        let myActivityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        myActivityIndicator.activityIndicatorViewStyle = .gray
+        myActivityIndicator.center = (self.navigationController?.view.center)!
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.backgroundColor = UIColor.white
+        self.view.addSubview(myActivityIndicator)
         
-        let container = CKContainer.default()
+        //Create Container variable and specify Database
+                let container = CKContainer.default()
         let publicDatabase = container.publicCloudDatabase
         let myPredicate = NSPredicate(value: true)
         
@@ -42,7 +50,9 @@ class RestaurantListTableViewController: UITableViewController {
                     self.restaurantsList!.removeAll()
                     for result in results!{
                         self.restaurantsList?.append(result)
-                    }
+                        myActivityIndicator.stopAnimating()
+                        myActivityIndicator.hidesWhenStopped = true
+                        }
                     self.tableView.reloadData()
                 }
             }
