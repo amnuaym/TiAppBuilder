@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  TrueUp
 //
 //  Created by Amnuay M on 10/25/17.

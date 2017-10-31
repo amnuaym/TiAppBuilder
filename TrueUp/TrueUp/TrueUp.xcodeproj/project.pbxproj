@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8F27E0121FA08C7A008DF5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27E0111FA08C7A008DF5B4 /* AppDelegate.swift */; };
-		8F27E0141FA08C7A008DF5B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27E0131FA08C7A008DF5B4 /* ViewController.swift */; };
+		8F27E0141FA08C7A008DF5B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27E0131FA08C7A008DF5B4 /* MainViewController.swift */; };
 		8F27E0171FA08C7A008DF5B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F27E0151FA08C7A008DF5B4 /* Main.storyboard */; };
 		8F27E0191FA08C7B008DF5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F27E0181FA08C7B008DF5B4 /* Assets.xcassets */; };
 		8F27E01C1FA08C7B008DF5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F27E01A1FA08C7B008DF5B4 /* LaunchScreen.storyboard */; };
+		8F27E0241FA08D23008DF5B4 /* PersonalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F27E0231FA08D23008DF5B4 /* PersonalPageViewController.swift */; };
+		8F92EBE31FA20F000070A74A /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F92EBE21FA20F000070A74A /* LoginScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F27E00E1FA08C79008DF5B4 /* TrueUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F27E0111FA08C7A008DF5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F27E0131FA08C7A008DF5B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F27E0131FA08C7A008DF5B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F27E0161FA08C7A008DF5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F27E0181FA08C7B008DF5B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F27E01B1FA08C7B008DF5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F27E01D1FA08C7B008DF5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F27E0231FA08D23008DF5B4 /* PersonalPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPageViewController.swift; sourceTree = "<group>"; };
+		8F92EBE21FA20F000070A74A /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				8F27E0111FA08C7A008DF5B4 /* AppDelegate.swift */,
-				8F27E0131FA08C7A008DF5B4 /* ViewController.swift */,
+				8F27E0131FA08C7A008DF5B4 /* MainViewController.swift */,
 				8F27E0151FA08C7A008DF5B4 /* Main.storyboard */,
 				8F27E0181FA08C7B008DF5B4 /* Assets.xcassets */,
 				8F27E01A1FA08C7B008DF5B4 /* LaunchScreen.storyboard */,
 				8F27E01D1FA08C7B008DF5B4 /* Info.plist */,
+				8F27E0231FA08D23008DF5B4 /* PersonalPageViewController.swift */,
+				8F92EBE21FA20F000070A74A /* LoginScreenViewController.swift */,
 			);
 			path = TrueUp;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F27E0141FA08C7A008DF5B4 /* ViewController.swift in Sources */,
+				8F27E0141FA08C7A008DF5B4 /* MainViewController.swift in Sources */,
+				8F27E0241FA08D23008DF5B4 /* PersonalPageViewController.swift in Sources */,
+				8F92EBE31FA20F000070A74A /* LoginScreenViewController.swift in Sources */,
 				8F27E0121FA08C7A008DF5B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63CUM85V74;
 				INFOPLIST_FILE = TrueUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.leesc.TrueUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63CUM85V74;
 				INFOPLIST_FILE = TrueUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.leesc.TrueUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
