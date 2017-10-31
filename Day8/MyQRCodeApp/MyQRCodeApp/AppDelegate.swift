@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let content = UNMutableNotificationContent()
+        content.title = NSString.localizedUserNotificationString(forKey: "Hello!", arguments: nil)
+        content.body = NSString.localizedUserNotificationString(forKey: "Hello_message_body", arguments: nil)
+        
+        // Deliver the notification in five seconds.
+        content.sound = UNNotificationSound.default()
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,repeats: false)
+        
+        // Schedule the notification.
+        let request = UNNotificationRequest(identifier: "FiveSecond", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request, withCompletionHandler: nil)
         return true
     }
 

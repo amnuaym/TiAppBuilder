@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Contact Number"; ObjectID = "0iQ-Dk-fAJ"; */
+"0iQ-Dk-fAJ.text" = "เบอร์ติดต่อ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Tz4-9R-lz2"; */
+"Tz4-9R-lz2.text" = "ชื่อ";
+
+/* Class = "UILabel"; text = "Comments & Suggestions"; ObjectID = "tkh-b4-Iwm"; */
+"tkh-b4-Iwm.text" = "ความคิดเห็น หรือข้อเสนอแนะ";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "tvY-CO-7bC"; */
+"tvY-CO-7bC.normalTitle" = "บันทึก";

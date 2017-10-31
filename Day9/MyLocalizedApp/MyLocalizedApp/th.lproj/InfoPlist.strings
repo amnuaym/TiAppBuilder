@@ -1,0 +1,10 @@
+/* 
+  infoPlist.strings
+  MyLocalizedApp
+
+  Created by Amnuay M on 10/9/17.
+  Copyright © 2017 ANT. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "แอพในภาษาของฉัน";
+"NSHumanReadableCopyright" = "2560 บ. แอนท์ สงวนลิขสิทธิ์.";

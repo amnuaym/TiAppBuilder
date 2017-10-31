@@ -29,8 +29,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pBY-JX-Kkp">
-                                <rect key="frame" x="27" y="203" width="266" height="266"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBY-JX-Kkp">
+                                <rect key="frame" x="48" y="245" width="224" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pBY-JX-Kkp" secondAttribute="height" multiplier="1:1" id="7fw-cv-ClE"/>
                                 </constraints>
@@ -54,16 +54,15 @@
                         <constraints>
                             <constraint firstItem="pBY-JX-Kkp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3kO-Na-ufC"/>
                             <constraint firstItem="Ray-wj-iJz" firstAttribute="leading" secondItem="aep-zh-xGb" secondAttribute="leading" id="4Dl-8K-mdS"/>
-                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="800" constant="40" id="5He-vQ-hN8"/>
-                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="top" secondItem="Ray-wj-iJz" secondAttribute="bottom" priority="900" constant="61" id="7hz-Fu-HUZ"/>
+                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="800" constant="20" id="5He-vQ-hN8"/>
+                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ray-wj-iJz" secondAttribute="bottom" constant="20" id="7hz-Fu-HUZ"/>
                             <constraint firstItem="aep-zh-xGb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FuX-qA-kyg"/>
-                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-99" id="G6w-gZ-BFw"/>
                             <constraint firstItem="Ray-wj-iJz" firstAttribute="top" secondItem="aep-zh-xGb" secondAttribute="bottom" constant="8" id="HiE-Et-es5"/>
                             <constraint firstItem="aep-zh-xGb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="RJu-wN-uxZ"/>
                             <constraint firstItem="Ray-wj-iJz" firstAttribute="trailing" secondItem="aep-zh-xGb" secondAttribute="trailing" id="Scx-Fu-Wic"/>
-                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" priority="250" id="Wj4-RS-aR8"/>
+                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="width" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="Wj4-RS-aR8"/>
                             <constraint firstItem="aep-zh-xGb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cBH-ML-Rh2"/>
-                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" priority="750" constant="-40" id="zJy-iN-aQL"/>
+                            <constraint firstItem="pBY-JX-Kkp" firstAttribute="height" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.7" id="xYF-KL-hnX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

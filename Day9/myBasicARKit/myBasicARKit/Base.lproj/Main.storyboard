@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mDf-7z-VUO">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VdZ-cZ-jYE">
+            <objects>
+                <viewController id="mDf-7z-VUO" customClass="ViewController" customModule="myBasicARKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7f-ge-emF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMT-Vh-7AM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </arscnView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Ct-G3J">
+                                <rect key="frame" x="16" y="430" width="136" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Durian">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDurianMethod" destination="mDf-7z-VUO" eventType="touchUpInside" id="vjV-WU-GzI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-N0-9bm">
+                                <rect key="frame" x="168" y="430" width="136" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Dog">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDog" destination="mDf-7z-VUO" eventType="touchUpInside" id="b7D-0U-FJ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mQJ-Ct-G3J" firstAttribute="trailing" secondItem="HcO-yc-UNf" secondAttribute="centerX" constant="-8" id="6AY-rV-Wub"/>
+                            <constraint firstItem="zMT-Vh-7AM" firstAttribute="leading" secondItem="HcO-yc-UNf" secondAttribute="leading" id="7PT-ad-su0"/>
+                            <constraint firstItem="HcO-yc-UNf" firstAttribute="trailing" secondItem="iB4-N0-9bm" secondAttribute="trailing" constant="16" id="GNm-AV-cgh"/>
+                            <constraint firstItem="zMT-Vh-7AM" firstAttribute="top" secondItem="F7f-ge-emF" secondAttribute="top" id="HkL-fN-aWb"/>
+                            <constraint firstItem="zMT-Vh-7AM" firstAttribute="bottom" secondItem="HcO-yc-UNf" secondAttribute="bottom" id="YZX-Yy-ClQ"/>
+                            <constraint firstItem="zMT-Vh-7AM" firstAttribute="trailing" secondItem="HcO-yc-UNf" secondAttribute="trailing" id="fgx-Hy-nyl"/>
+                            <constraint firstItem="mQJ-Ct-G3J" firstAttribute="leading" secondItem="HcO-yc-UNf" secondAttribute="leading" constant="16" id="g8B-1L-b8r"/>
+                            <constraint firstItem="iB4-N0-9bm" firstAttribute="leading" secondItem="zMT-Vh-7AM" secondAttribute="centerX" constant="8" id="iGY-7t-Dcd"/>
+                            <constraint firstItem="HcO-yc-UNf" firstAttribute="bottom" secondItem="iB4-N0-9bm" secondAttribute="bottom" constant="20" id="rQC-X9-hpG"/>
+                            <constraint firstItem="HcO-yc-UNf" firstAttribute="bottom" secondItem="mQJ-Ct-G3J" secondAttribute="bottom" constant="20" id="t7y-lr-MdQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HcO-yc-UNf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="zMT-Vh-7AM" id="BDW-5j-hSd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmR-x4-9qp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.375" y="83.75"/>
+        </scene>
+    </scenes>
+</document>

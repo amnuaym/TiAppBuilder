@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyReminderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor" translatesAutoresizingMaskIntoConstraints="NO" id="arn-2v-SJw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="arn-2v-SJw" secondAttribute="height" multiplier="320:323" id="Ib1-CH-BOG"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="G05-Ux-ivT">
+                                <rect key="frame" x="0.0" y="323" width="320" height="195"/>
+                                <date key="date" timeIntervalSinceReferenceDate="529767497.82566297">
+                                    <!--2017-10-15 13:38:17 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvc-5y-HWa">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LCl-14-VXQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="บันทึกการแจ้งเตือน">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNotificationMethod" destination="BYZ-38-t0r" eventType="touchUpInside" id="hR8-Kb-9D9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G05-Ux-ivT" firstAttribute="top" secondItem="arn-2v-SJw" secondAttribute="bottom" id="3LL-ny-t9z"/>
+                            <constraint firstItem="uvc-5y-HWa" firstAttribute="top" secondItem="G05-Ux-ivT" secondAttribute="bottom" id="3gK-Aa-8fp"/>
+                            <constraint firstItem="G05-Ux-ivT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8n4-xu-Tj6"/>
+                            <constraint firstItem="arn-2v-SJw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hcu-Q9-klj"/>
+                            <constraint firstItem="arn-2v-SJw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ngp-Ui-sD6"/>
+                            <constraint firstItem="G05-Ux-ivT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gwK-ny-PIe"/>
+                            <constraint firstItem="uvc-5y-HWa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kvx-Wo-grP"/>
+                            <constraint firstItem="uvc-5y-HWa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nUU-KR-C70"/>
+                            <constraint firstItem="uvc-5y-HWa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oqe-GI-3OJ"/>
+                            <constraint firstItem="arn-2v-SJw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s7b-ey-12x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myDatePicker" destination="G05-Ux-ivT" id="cNY-KL-9hI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.25" y="29.577464788732396"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doctor" width="300" height="300"/>
+    </resources>
+</document>

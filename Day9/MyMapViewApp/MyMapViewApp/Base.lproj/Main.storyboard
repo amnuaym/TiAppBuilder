@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h4m-P5-hUG">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMapViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT1-Hg-vJ6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OT1-Hg-vJ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QnD-Zx-kDP"/>
+                            <constraint firstItem="OT1-Hg-vJ6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a59-M3-dgy"/>
+                            <constraint firstItem="OT1-Hg-vJ6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cBD-oJ-yRq"/>
+                            <constraint firstItem="OT1-Hg-vJ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yH5-iT-DgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VcW-lj-KLd"/>
+                    <connections>
+                        <outlet property="myMapView" destination="OT1-Hg-vJ6" id="upO-p7-UkV"/>
+                        <segue destination="Uev-g8-d0h" kind="show" identifier="detailSegue" id="D29-og-O9r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532.5" y="132.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Aei-HA-H7w">
+            <objects>
+                <viewController id="Uev-g8-d0h" customClass="DetailViewController" customModule="MyMapViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zOZ-R2-5fE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อสถานที่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-MO-wIQ">
+                                <rect key="frame" x="0.0" y="109" width="320" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="a7a-WI-3uZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ถนน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWw-SN-d72">
+                                <rect key="frame" x="0.0" y="144" width="320" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="htF-B7-yDo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตำแหน่ง เส้นแวง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-2g-Frd">
+                                <rect key="frame" x="0.0" y="214" width="320" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hqr-cD-eHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตำแหน่ง เส้นรุ้ง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD1-Bt-P0b">
+                                <rect key="frame" x="0.0" y="179" width="320" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="S1X-6L-54x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tGp-2g-Frd" firstAttribute="leading" secondItem="a3r-ev-LNV" secondAttribute="leading" id="0db-ve-ZWp"/>
+                            <constraint firstItem="WD1-Bt-P0b" firstAttribute="leading" secondItem="a3r-ev-LNV" secondAttribute="leading" id="6e5-6F-Msv"/>
+                            <constraint firstItem="tGp-2g-Frd" firstAttribute="top" secondItem="WD1-Bt-P0b" secondAttribute="bottom" constant="10" id="EGS-Em-8se"/>
+                            <constraint firstItem="mWw-SN-d72" firstAttribute="top" secondItem="F8q-MO-wIQ" secondAttribute="bottom" constant="10" id="JqI-BP-CNN"/>
+                            <constraint firstItem="mWw-SN-d72" firstAttribute="leading" secondItem="a3r-ev-LNV" secondAttribute="leading" id="Jyd-Ll-ceF"/>
+                            <constraint firstItem="a3r-ev-LNV" firstAttribute="trailing" secondItem="mWw-SN-d72" secondAttribute="trailing" id="N49-hb-B0Z"/>
+                            <constraint firstItem="F8q-MO-wIQ" firstAttribute="leading" secondItem="a3r-ev-LNV" secondAttribute="leading" id="NWL-qP-VGu"/>
+                            <constraint firstItem="a3r-ev-LNV" firstAttribute="trailing" secondItem="F8q-MO-wIQ" secondAttribute="trailing" id="Nkz-82-pzl"/>
+                            <constraint firstItem="a3r-ev-LNV" firstAttribute="trailing" secondItem="WD1-Bt-P0b" secondAttribute="trailing" id="Olp-9M-kOG"/>
+                            <constraint firstItem="F8q-MO-wIQ" firstAttribute="top" secondItem="a3r-ev-LNV" secondAttribute="top" constant="45" id="Qn9-OY-Gq0"/>
+                            <constraint firstItem="a3r-ev-LNV" firstAttribute="trailing" secondItem="tGp-2g-Frd" secondAttribute="trailing" id="aiK-Sl-LyS"/>
+                            <constraint firstItem="WD1-Bt-P0b" firstAttribute="top" secondItem="mWw-SN-d72" secondAttribute="bottom" constant="10" id="gQ0-tK-X3V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a3r-ev-LNV"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationLat" destination="WD1-Bt-P0b" id="nIf-xR-G1h"/>
+                        <outlet property="locationLong" destination="tGp-2g-Frd" id="Wpf-BJ-1W8"/>
+                        <outlet property="locationName" destination="F8q-MO-wIQ" id="0m8-KB-L4r"/>
+                        <outlet property="locationStreet" destination="mWw-SN-d72" id="U3l-U4-i5B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdi-qV-x4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194.375" y="132.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u96-jN-3hT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h4m-P5-hUG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V1p-p1-biM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gUR-a1-wcr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJT-NO-Z60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="133"/>
+        </scene>
+    </scenes>
+</document>

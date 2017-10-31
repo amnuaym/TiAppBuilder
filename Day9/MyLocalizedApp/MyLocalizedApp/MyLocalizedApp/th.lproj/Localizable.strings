@@ -1,0 +1,12 @@
+/* 
+  File.strings
+  MyLocalizedApp
+
+  Created by Amnuay M on 10/9/17.
+  Copyright © 2017 ANT. All rights reserved.
+*/
+
+"DPU" = "มธบ";
+"Thank you for your comments and suggestions" = "ขอบคุณสำหรับความคิดเห็นและข้อเสนอแนะ";
+"Cancel" = "ยกเลิก";
+"OK" = "ตกลง";
